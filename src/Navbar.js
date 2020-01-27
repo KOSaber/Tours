@@ -15,6 +15,8 @@ import Home from './Home'
 import Places from './Places'
 import Contact from './Contact'
 import TourGuy from './TourGuy'
+import Login from './Login'
+
 
 
 
@@ -44,16 +46,20 @@ class NavbarMain extends React.Component {
           color="faded"
           dark
           expand="md"
-          className="navDark">
+          fixed={`top`}
+          className="navDark"
+        >
              <Container className="AppIc">
-              <NavbarBrand> <img src={'https://image.flaticon.com/icons/svg/1373/1373039.svg'} width="50" height="50" /> <span className='NavJed'>Tours</span></NavbarBrand>
+              <NavbarBrand> <img src={'https://image.flaticon.com/icons/svg/1373/1373039.svg'} width="50" height="50" /> <span className='NavJed'>ShowMeSaudi</span></NavbarBrand>
         </Container>
 
-       <Container className="AppIc">
-          <NavbarBrand> <Link to="/Home">Home</Link> </NavbarBrand>
-          <NavbarBrand> <Link to="/TourGuy">Tour Guys</Link> </NavbarBrand>
-          <NavbarBrand> <Link to="/Places">Places</Link> </NavbarBrand>
-          <NavbarBrand> <Link to="/contact">Contact</Link> </NavbarBrand>
+       <Container>
+          <NavbarBrand> <Link to="/Home" className="NavLink">Home</Link> </NavbarBrand>
+          <NavbarBrand> <Link to="/TourGuy" className="NavLink">Tour Guys</Link> </NavbarBrand>
+          <NavbarBrand> <Link to="/Places" className="NavLink">Places</Link> </NavbarBrand>
+          <NavbarBrand> <Link to="/Login" className="NavLink">Login</Link> </NavbarBrand>
+          
+          <NavbarBrand> <Link to="/contact" className="NavLink">Contact</Link> </NavbarBrand>
         </Container>
         </Navbar>
 
@@ -64,6 +70,7 @@ class NavbarMain extends React.Component {
         <Route path="/Home" component={Home} />
         <Route path="/TourGuy" component={TourGuy} />
         <Route path="/Places" component={Places} />
+        <Route path="/Login" component={Login} />
         <Route path="/Contact" component={Contact} />
         </div>
 
