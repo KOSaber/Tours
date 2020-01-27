@@ -37,4 +37,113 @@
   transition: all .2s linear;
   text-align: center;
 }
+/*********************************
+7.1 Contact Form
+*********************************/
+
+.contact_form_container
+{
+	width: 100%;
+	margin-top: 7px;
+}
+.contact_input
+{
+	width: 100%;
+	height: 41px;
+	border: solid 2px #dbdbdb;
+	padding-left: 20px;
+	margin-bottom: 19px;
+	outline: none;
+}
+.contact_input::-webkit-input-placeholder,
+.contact_input_message::-webkit-input-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	font-style: italic;
+	color: #7d8293 !important;
+}
+.contact_input:-moz-placeholder,
+.contact_input_message:-moz-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	font-style: italic;
+	color: #7d8293 !important;
+}
+.contact_input::-moz-placeholder,
+.contact_input_message::-moz-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	font-style: italic;
+	color: #7d8293 !important;
+} 
+.contact_input:-ms-input-placeholder,
+.contact_input_message:-ms-input-placeholder
+{ 
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	font-style: italic;
+	color: #7d8293 !important;
+}
+.contact_input::input-placeholder,
+.contact_input_message::input-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	font-style: italic;
+	color: #7d8293 !important;
+}
+.contact_input_message
+{
+	width: 100%;
+	height: 223px;
+	border: solid 2px #dbdbdb;
+	outline: none;
+	padding-top: 13px;
+	padding-left: 20px;
+}
+.contact_send_btn
+{
+	width: 161px;
+	height: 56px;
+	background: rgba(254,60,82,1);
+	border: none;
+	outline: none;
+	float: right;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+	margin-top: 14px;
+}
+.contact_send_btn:hover
+{
+	background: rgba(254,60,82,0.8);
+}
+
+/*********************************
+ Contact Map
+*********************************/
+.contact_map
+{
+	margin-top: 86px;
+}
+#google_map
+{
+	width: 100%;
+	height: 532px;
+}
+.map_container
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#map
+{
+	width: 100%;
+	height: calc(100% + 30px);
+}
 
