@@ -4,6 +4,16 @@
   display: flex;
 } 
 
+.Navbar{
+  display:flex;
+}
+
+.NavLink{
+  color: white;
+}
+
+
+
 .footer{
   position: fixed;
   left: 0;
