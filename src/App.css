@@ -11,6 +11,10 @@
 .NavLink{
   color: white;
 }
+.NavJed{
+  color: white;
+}
+
 
 
 
@@ -48,3 +52,40 @@
   text-align: center;
 }
 
+.ContainerHome {
+
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+.searchCont{ 
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.HomeText{
+  font-weight: 1000;
+  font-size:60px;
+}
+.search{
+  justify-content: center;
+  
+}
+
+/* 
+.HomeImg{
+  opacity: 0.5;
+  filter: alpha(opacity=50); 
+}
+ */
+
+ .form-inline{
+   display: flex;
+   justify-content: center;
+}
