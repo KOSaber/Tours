@@ -74,7 +74,7 @@ class SignUp extends Component {
         {/* const [value, setValue] = useState()value={this.props.value} onChange={this.props.onChange} */}
         {/* <PhoneInput placeholder="Enter phone number" value={this.state.value} onChange={(e)=>this.setValue(e)}/> */}
         <ReactPhoneInput inputExtraProps={{name: "phone",required: true,autoFocus: true}}
-          defaultCountry={"sg"} value={this.state.phone} onChange={this.handleOnChange}/>
+          defaultCountry={"sa"} value={this.state.phone} placeholder="+966" onChange={this.handleOnChange}/>
       </FormGroup>
       </Col>
       <Col>
