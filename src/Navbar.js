@@ -17,6 +17,7 @@ import Contact from './Contact'
 import TourGuy from './TourGuy'
 import Login from './Login'
 import About from './About'
+import SignUp from './SignUp'
 
 
 
@@ -74,6 +75,7 @@ class NavbarMain extends React.Component {
         <Route path="/Login" component={Login} />
         <Route path="/About" component={About} />
         <Route path="/Contact" component={Contact} />
+        <Route path="/SignUp" component={SignUp} />
         </div>
 
      
