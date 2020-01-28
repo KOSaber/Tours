@@ -51,8 +51,8 @@ class NavbarMain extends React.Component {
           fixed={`top`}
           className="navDark"
         >
-             <Container className="AppIc">
-              <NavbarBrand> <img src={'https://image.flaticon.com/icons/svg/1373/1373039.svg'} width="50" height="50" /> <span className='NavJed'>ShowMeSaudi</span></NavbarBrand>
+        <Container className="AppIc">
+          <NavbarBrand> <img src={'https://image.flaticon.com/icons/svg/1373/1373039.svg'} width="50" height="50" /> <span className='NavJed'>ShowMeSaudi</span></NavbarBrand>
         </Container>
 
        <Container>
