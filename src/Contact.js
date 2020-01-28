@@ -3,18 +3,6 @@ import React from 'react';
 export default function Contact(){
     return (
         <div>
-          
-          <div>
-                  <div>
-                      <br></br>
-                      <br></br>
-                      <br></br>
-                  </div>
-                  <h1 className="text-center"> Contact Us </h1>
-                  <div>
-                      <br></br>
-                  </div>
-            </div>
                     
           {/* Contact */}
           <div className="contact">
@@ -28,7 +16,7 @@ export default function Contact(){
               <div className="row contact_content">
                 <div className="col-lg-5">
                   <div className="contact_text">
-                    <p>.</p>
+                    <p></p>
                   </div>
                   <div className="contact_info">
                     <div className="contact_info_box">i</div>
@@ -63,16 +51,7 @@ export default function Contact(){
                   </div>
                 </div>
               </div>
-              <div className="row contact_map">
-                {/* Google Map */}
-                <div className="col">
-                  <div id="google_map">
-                    <div className="map_container">
-                      <div id="map" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
            
