@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Card } from 'react-bootstrap/';
 import guide from './DB' //Import the file where the data is stored.
 import { Container, Row} from 'react-bootstrap/';
-import TourGuy from './TourGuy'
 import {
     Link
   } from 'react-router-dom';
@@ -18,6 +17,7 @@ class CityList extends Component {
           
             return <div key={index} className='Card'>
            <div className='ContainerHomeCity'>
+               
                 <Card style={{ width: '15rem', margin: '2px', marginBottom: '30px' }} className="cardHov">
                     {/* Add onClick event handler to the name and an image of the place */}
 

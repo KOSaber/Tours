@@ -62,7 +62,6 @@
 *********************************/
 
 .ContainerHomeSearch {
-
   position: relative;
   text-align: center;
   color: white;
@@ -83,9 +82,11 @@
   transform: translate(-50%, -50%);
 
 }
+
 .HomeText{
   font-weight: 1000;
   font-size:60px;
+  text-shadow: red 1px 0 10px;
 }
 .search{
   justify-content: center;
@@ -366,7 +367,7 @@ Label {
 .log{
 	margin-left: 5% !important;
 }
-.Login{
+.SpaceUp{
   padding-top:70px ;
   margin-top: 70px;
   /* display: flex;
@@ -379,6 +380,7 @@ Label {
 	font-weight: 500;
 	text-align: center;
 }
-.bgpic{
+/* .bgpic{
 	background-image: url("img/b.png");
-}
+} */
+

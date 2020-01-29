@@ -16,7 +16,7 @@ import './App.css';
 class Login extends Component {
   render() {
   return (
-    <Container className="Login">
+    <Container className="SpaceUp">
       <h2 className="title">Sign In</h2>
       <br/>
       <Form className="form">
