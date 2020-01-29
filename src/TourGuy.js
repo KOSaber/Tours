@@ -12,14 +12,16 @@ class TourGuy extends Component {
     super();
     this.state={
       rate:  0,
-      raters: 0,
+      raters: 1,
       moreInfo: ''
     }
   }
   showRate(e){
     // e.preventDefault()
-  
-    this.setState({moreInfo:<h6>{ parseInt(this.state.rate/this.state.raters) } Stars</h6>})
+    // if(this.state.rate/this.state.raters > 0){
+    // this.setState({moreInfo:<h6>{ parseFloat(this.state.rate/this.state.raters).toFixed(1) } Stars</h6>})
+  // }
+  return (<h6>{ parseFloat(this.state.rate/this.state.raters).toFixed(1) } Stars</h6>)
 }
 
     render() {
@@ -41,7 +43,9 @@ class TourGuy extends Component {
                     {/* {item.city} */}
                     <Link to="/TourGayProfile">Tour Guy Name</Link>
                     <Card.Body>Brand Statement For The Tour Guy</Card.Body>
-                    <Rater total={5} rating={0} interactive={true} onRate={Event} onRating={true} /> &nbsp;
+                    <Rater total={5} rating={this.state.rate/this.state.raters} style={{cursor:'pointer'}} onRate={(rating)=>{this.setState((prev)=>({raters: prev.raters +1, rate: rating.rating + prev.rate})); this.showRate()}} />
+                      {/* <div>{this.state.moreInfo}</div> */}
+                      {this.showRate()}
                     <Link to="/Comment"> <img src={'https://i.postimg.cc/3NQ9Fmr5/blog.png'} width="30" height="30" /></Link>
                    
                     {/* <Rater total={5} rating={2} style={{cursor:'pointer'}}/> */}
