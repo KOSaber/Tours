@@ -17,7 +17,6 @@ class Login extends Component {
   render() {
   return (
     <Container className="Login">
-      <br/><br/><br/><br/>
       <h2 className="title">Sign In</h2>
       <br/>
       <Form className="form">

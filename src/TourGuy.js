@@ -1,6 +1,7 @@
 import React from 'react';
 import guide from './DB' //Import the file where the data is stored.
 import { Card } from 'react-bootstrap/';
+import TourGayProfile from './TourGayProfile'
 import Rater from 'react-rater';
 import 'react-rater/lib/react-rater.css';
 

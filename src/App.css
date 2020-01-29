@@ -51,15 +51,26 @@
   transition: all .2s linear;
   text-align: center;
 }
+
+.cardHov:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
 /*********************************
 7. Contact
 *********************************/
 
-.ContainerHome {
+.ContainerHomeSearch {
 
   position: relative;
   text-align: center;
   color: white;
+}
+.ContainerHomeCity{
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
 }
 
 
@@ -80,6 +91,12 @@
   justify-content: center;
   
 }
+.input-group.md-form.form-sm.form-2 input.red-border {
+  border: 1px solid #ef9a9a;
+  background-color: #ffffff;
+}
+
+
 
 /* 
 .HomeImg{
@@ -347,8 +364,16 @@ Label {
 	font-weight: 500;
 	}
 .log{
-	margin-left: 5%;
+	margin-left: 5% !important;
 }
+.Login{
+  padding-top:70px ;
+  margin-top: 70px;
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+}
+
 .title{
 	font-style: italic;
 	font-weight: 500;

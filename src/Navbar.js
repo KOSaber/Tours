@@ -59,7 +59,7 @@ class NavbarMain extends React.Component {
           <NavbarBrand> <Link to="/" className="NavLink">Home</Link> </NavbarBrand>
           <NavbarBrand> <Link to="/TourGuy" className="NavLink">Tour Guys</Link> </NavbarBrand>
           <NavbarBrand> <Link to="/Packages" className="NavLink">Packages</Link> </NavbarBrand>
-          <NavbarBrand> <Link to="/Login" className="NavLink">Login</Link> </NavbarBrand>
+          <NavbarBrand> <Link to="/Login" className="NavLink">Sign In</Link> </NavbarBrand>
           <NavbarBrand> <Link to="/About" className="NavLink">About Us</Link> </NavbarBrand>
           <NavbarBrand> <Link to="/contact" className="NavLink">Contact</Link> </NavbarBrand>
         </Container>
