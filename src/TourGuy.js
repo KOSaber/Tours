@@ -7,12 +7,26 @@ import {
     Link
   } from 'react-router-dom';
 
-
 class TourGuy extends Component {
-
+  constructor(){
+    super();
+    this.state={
+      rate:  0,
+      raters: 0,
+      moreInfo: ''
+    }
+  }
+  showRate(e){
+    // e.preventDefault()
+  
+    this.setState({moreInfo:<h6>{ parseInt(this.state.rate/this.state.raters) } Stars</h6>})
+}
 
     render() {
      
+      console.log(this.state.rate);
+      console.log(this.state.raters);
+
         const AllCities=guide.map((item, index) => {
 
           
