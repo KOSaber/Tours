@@ -380,16 +380,6 @@ Label {
 	font-weight: 500;
 	text-align: center;
 }
-<<<<<<< HEAD
-/* .bgpic{
-	background-image: url("img/b.png");
-} */
-
-/* $react-rater-link: #ccc !default;
-$react-rater-hover: #666 !default;
-$react-rater-active: rgb(0, 0, 0) !default;
- */
-=======
 .Link{
 	color: #FFFFFF !important;
 }
@@ -400,4 +390,3 @@ $react-rater-active: rgb(0, 0, 0) !default;
 	display: flex;
 	justify-content: center;
 }
->>>>>>> master
