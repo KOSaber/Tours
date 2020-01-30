@@ -8,26 +8,9 @@ import {
   } from 'react-router-dom';
 
 class TourGuy extends Component {
-  constructor(){
-    super();
-    this.state={
-      rate:  0,
-      raters: 1,
-      moreInfo: ''
-    }
-  }
-  showRate(e){
-    // e.preventDefault()
-    // if(this.state.rate/this.state.raters > 0){
-    // this.setState({moreInfo:<h6>{ parseFloat(this.state.rate/this.state.raters).toFixed(1) } Stars</h6>})
-  // }
-  return (<h6>{ parseFloat(this.state.rate/this.state.raters).toFixed(1) } Stars</h6>)
-}
+
 
     render() {
-     
-      console.log(this.state.rate);
-      console.log(this.state.raters);
 
         const AllCities=guide.map((item, index) => {
 
@@ -45,11 +28,7 @@ class TourGuy extends Component {
                     <Link to="/TourGayProfile">Tour Guy Name</Link>
                     <Card.Body>100<img src={'https://i.dlpng.com/static/png/2304771-image-sr-iconpng-dragon-ball-z-dokkan-battle-wikia-fandom-sr-png-290_160_preview.webp'} width="40" height="30" />Per 2 hours</Card.Body>
                     <Card.Body>Brand Statement For The Tour Guy</Card.Body>
-
-                      <Rater total={5} rating={this.state.rate/this.state.raters} style={{cursor:'pointer'}} onRate={(rating)=>{this.setState((prev)=>({raters: prev.raters +1, rate: rating.rating + prev.rate})); this.showRate()}} /> 
-                       {/* <div>{this.state.moreInfo}</div> */}
-                       {this.showRate()}
-                 
+                    <Rater total={5} rating={3} interactive={false} style={{cursor:'pointer'}} />
                     </Card.Body>
                 </Card>
             </div>

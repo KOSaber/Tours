@@ -8,10 +8,21 @@ import { Container, Row} from 'react-bootstrap/';
 import Rater from 'react-rater';
 
 class TourGayProfile  extends Component {
-
+  constructor(){
+    super();
+    this.state={
+      rate:  0,
+      raters: 0
+    }
+  }
+  showRate(e){
+  if(this.state.rate/this.state.raters > 0)
+  return (<h6>{ parseFloat(this.state.rate/this.state.raters).toFixed(1) } Stars</h6>)
+}
 
   render() {
-    
+    console.log(this.state.rate);
+      console.log(this.state.raters);
     const AllPackages=guide.map((item, index) => {
 
           
@@ -46,7 +57,8 @@ class TourGayProfile  extends Component {
             <div className="col-lg-5">
               <h1 className="font-weight-light">Tour Guy Name</h1>
               <p>Tour guy brand statement and description.. Tour guy brand statement and description..Tour guy brand statement and description..Tour guy brand statement and description</p>
-              <Rater total={5} rating={0} interactive={true} onRate={Event} onRating={true} /> &nbsp;
+              <Rater total={5} rating={this.state.rate/this.state.raters} style={{cursor:'pointer'}} onRate={(rating)=>{this.setState((prev)=>({raters: prev.raters +1, rate: rating.rating + prev.rate}));}} /> 
+                       {this.showRate()}
             </div>
             {/* /.col-md-4 */}
           </div>
