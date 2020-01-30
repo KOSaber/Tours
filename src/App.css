@@ -380,6 +380,7 @@ Label {
 	font-weight: 500;
 	text-align: center;
 }
+<<<<<<< HEAD
 /* .bgpic{
 	background-image: url("img/b.png");
 } */
@@ -388,3 +389,15 @@ Label {
 $react-rater-hover: #666 !default;
 $react-rater-active: rgb(0, 0, 0) !default;
  */
+=======
+.Link{
+	color: #FFFFFF !important;
+}
+.color {
+	background-color:  rgb(0, 0, 68) !important;
+}
+.Cont{
+	display: flex;
+	justify-content: center;
+}
+>>>>>>> master

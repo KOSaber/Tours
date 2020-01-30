@@ -41,15 +41,15 @@ class TourGuy extends Component {
                     <Card.Img variant="top" src={item.imgSrc} width="250" height="250" />
                     <Card.Body>
                     {/* {item.city} */}
+                    <span></span>
                     <Link to="/TourGayProfile">Tour Guy Name</Link>
+                    <Card.Body>100<img src={'https://i.dlpng.com/static/png/2304771-image-sr-iconpng-dragon-ball-z-dokkan-battle-wikia-fandom-sr-png-290_160_preview.webp'} width="40" height="30" />Per 2 hours</Card.Body>
                     <Card.Body>Brand Statement For The Tour Guy</Card.Body>
-                    <Rater total={5} rating={this.state.rate/this.state.raters} style={{cursor:'pointer'}} onRate={(rating)=>{this.setState((prev)=>({raters: prev.raters +1, rate: rating.rating + prev.rate})); this.showRate()}} />
-                      {/* <div>{this.state.moreInfo}</div> */}
-                      {this.showRate()}
-                    <Link to="/Comment"> <img src={'https://i.postimg.cc/3NQ9Fmr5/blog.png'} width="30" height="30" /></Link>
-                   
-                    {/* <Rater total={5} rating={2} style={{cursor:'pointer'}}/> */}
-                    {/* ,{ react-rater-link:'#ccc' !default} ,{react-rater-hover: #666 !default},{react-rater-active: #000 !default} */}
+
+                      <Rater total={5} rating={this.state.rate/this.state.raters} style={{cursor:'pointer'}} onRate={(rating)=>{this.setState((prev)=>({raters: prev.raters +1, rate: rating.rating + prev.rate})); this.showRate()}} /> 
+                       {/* <div>{this.state.moreInfo}</div> */}
+                       {this.showRate()}
+                 
                     </Card.Body>
                 </Card>
             </div>
@@ -64,13 +64,12 @@ class TourGuy extends Component {
              </div>
              
           </div>  
-            <Container>
-              
-            <Row>
-                  {/* render the list of city generated in the render method above */}
-                  {AllCities}
-            </Row>
-        </Container>
+          <Container>
+              <Row className='Cont'>
+                    {/* render the list of city generated in the render method above */}
+                    {AllCities}
+              </Row>
+          </Container>
         </div>
         )   
     }
