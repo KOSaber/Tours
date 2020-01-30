@@ -29,7 +29,7 @@ class Packages extends Component {
                     <Card.Body>Description about the Package</Card.Body>
                     <Card.Body>Tour Guy Image</Card.Body>
                     <Card.Body>Tour Guy Name</Card.Body>
-                    <Link to="/TourGayProfile">Check on His Profile</Link>
+                    <Link to="/TourGuyProfile">Check on His Profile</Link>
                    
                     </Card.Body>
                 </Card>
@@ -39,7 +39,7 @@ class Packages extends Component {
         return (
         <div>
          <div className='ContainerHomeSearch'>
-             <img className='TourGayHomeImg' src={'https://www.miki.co.uk/sites/MikiTravelGlobal/files/slider_One_final.jpg?1580169600073'} width="100%" height="50%"/>
+             <img className='TourGuyHomeImg' src={'https://www.miki.co.uk/sites/MikiTravelGlobal/files/slider_One_final.jpg?1580169600073'} width="100%" height="50%"/>
              <div className="searchCont">
              <p className='HomeText'>Our Best Tour Packages</p>
              </div>

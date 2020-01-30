@@ -25,7 +25,7 @@ class TourGuy extends Component {
                     <Card.Body>
                     {/* {item.city} */}
                     <span></span>
-                    <Link to="/TourGayProfile">Tour Guy Name</Link>
+                    <Link to="/TourGuyProfile">Tour Guy Name</Link>
                     <Card.Body>100<img src={'https://i.dlpng.com/static/png/2304771-image-sr-iconpng-dragon-ball-z-dokkan-battle-wikia-fandom-sr-png-290_160_preview.webp'} width="40" height="30" />Per 2 hours</Card.Body>
                     <Card.Body>Brand Statement For The Tour Guy</Card.Body>
                     <Rater total={5} rating={3} interactive={false} style={{cursor:'pointer'}} />
@@ -37,7 +37,7 @@ class TourGuy extends Component {
         return (
         <div>
          <div className='ContainerHomeSearch'>
-             <img className='TourGayHomeImg' src={'https://i.postimg.cc/CMcw8xKf/Screen-Shot-2020-01-28-at-2-18-16-PM.png'} width="100%" height="50%"/>
+             <img className='TourGuyHomeImg' src={'https://i.postimg.cc/CMcw8xKf/Screen-Shot-2020-01-28-at-2-18-16-PM.png'} width="100%" height="50%"/>
              <div className="searchCont">
              <p className='HomeText'>Privileged Access With The Best Tour Guys</p>
              </div>

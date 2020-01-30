@@ -16,12 +16,12 @@ class TourForm extends Component{
             <Form>
             <FormGroup>
                 <Label for="exampleText">About Me ..</Label>
-                <Input type="textarea" name="text" id="exampleText" />
+                <Input type="textarea" name="AboutMe" id="exampleText" />
             </FormGroup>
             <FormGroup>
                 <Label for="exampleFile">Personal Picture</Label>
                 {/* <Input type="file" name="file" id="exampleFile" /> */}
-                <CustomInput type="file" name="file" id="exampleFile" label="Please choose your Personal photo" />
+                <CustomInput type="file" name="img" id="exampleFile" label="Please choose your Personal photo" method="post" enctype="multipart/form-data" />
                 {/* <FormText color="muted">
                       Please choose your Personal photo ...
                 </FormText> */}

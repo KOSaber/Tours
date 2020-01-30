@@ -7,7 +7,7 @@ import {
 import { Container, Row} from 'react-bootstrap/';
 import Rater from 'react-rater';
 
-class TourGayProfile  extends Component {
+class TourGuyProfile  extends Component {
   constructor(){
     super();
     this.state={
@@ -89,4 +89,4 @@ class TourGayProfile  extends Component {
   );}
 };
 
-export default TourGayProfile;
+export default TourGuyProfile;
