@@ -59,8 +59,8 @@ handleChange(e) {
       if(user.user.tourType=="regUser"){
         this.props.history.push("./")
       }
-      else if(user.user.tourType=="tour user"){
-        this.props.history.push("./TourGuyProfile/")
+      else{
+        this.props.history.push("./TourGuyProfile")
       }
       })
     .catch(err => console.log(err))
@@ -96,7 +96,7 @@ handleChange(e) {
           <CustomInput type="switch" id="exampleCustomSwitch2" name="tourType" label="Tour" onChange={(e)=>this.handleChange(e)} />
 
         </Col>
-        <Button className="log" onClick ={this.onsubmitTheStateToPosted} > SignIn</Button>{'  '}
+        <Button className="log" onClick ={this.onsubmitTheStateToPosted} > Sign In</Button>{'  '}
         <Link to="/SignUp"><Button className='log'>SignUp</Button></Link>
         {/* <a href="SignUp"> SignUp</a>  */}
       </Form>
