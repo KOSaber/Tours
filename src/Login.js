@@ -2,24 +2,76 @@
 import guide from './DB' //Import the file where the data is stored.
 import React, { Component } from 'react';
 import {
-  Container, Col, Form,
+  Container,CustomInput, Col,Row, Form,FormText,
   FormGroup, Label, Input,
   Button
 } from 'reactstrap';
 import {
- Link
+ Link, Redirect
 } from 'react-router-dom';
-
+import axios from 'axios'
 import './App.css';
-
+import jwt_decode from 'jwt-decode'
 
 class Login extends Component {
+  state={
+    status: true,
+    api:"http://localhost:7000/api/r-login"
+}
+rInfo(e){
+    // e.preventDefault()
+    console.log(this.state.api+"this.state.api")
+
+    this.setState({api:"http://localhost:7000/api/r-login"})
+  }
+tInfo(e){
+    // e.preventDefault()   
+     console.log(this.state.api+"this.state.api")
+
+    this.setState({api:"http://localhost:7000/api/t-login"})
+  }
+handleChange(e) {
+   this.setState({status: !this.state.status})
+    if(!this.state.status){
+    this.rInfo(e);
+  }
+    else {
+      this.tInfo(e)
+    }
+  }
+
+  changeTheStateForform = (e)=>{
+    this.setState({
+      [e.target.name] : e.target.value
+    })
+  }
+
+  onsubmitTheStateToPosted = ()=>{
+
+    axios.post(this.state.api,this.state)
+    .then(
+      (res) =>{ 
+        console.log(res)
+      localStorage.setItem('usertoken' , res.data.token)
+    var user =  jwt_decode(res.data.token)
+    console.log(user)
+
+      if(user.user.tourType=="regUser"){
+        this.props.history.push("./")
+      }
+      else if(user.user.tourType=="tour user"){
+        this.props.history.push("./TourGuyProfile/")
+      }
+      })
+    .catch(err => console.log(err))
+  }
+
   render() {
   return (
     <Container className="SpaceUp">
       <h2 className="title">Sign In</h2>
       <br/>
-      <Form className="form">
+      <Form className="form" onSubmit ={this.onsubmitTheStateToPosted}>
         <Col>
           <FormGroup className="col-md-10">
             <Label>Email</Label>
@@ -28,7 +80,7 @@ class Login extends Component {
               name="email"
               id="exampleEmail"
               placeholder="myemail@email.com"
-            />
+              onChange={this.changeTheStateForform}/>
           </FormGroup>
         </Col>
         <Col>
@@ -39,10 +91,12 @@ class Login extends Component {
               name="password"
               id="examplePassword"
               placeholder="********"
-            />
+              onChange={this.changeTheStateForform}/>
           </FormGroup>
+          <CustomInput type="switch" id="exampleCustomSwitch2" name="tourType" label="Tour" onChange={(e)=>this.handleChange(e)} />
+
         </Col>
-        <Button className="log">Submit</Button>{'  '}
+        <Button className="log" onClick ={this.onsubmitTheStateToPosted} > SignIn</Button>{'  '}
         <Link to="/SignUp"><Button className='log'>SignUp</Button></Link>
         {/* <a href="SignUp"> SignUp</a>  */}
       </Form>

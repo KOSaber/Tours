@@ -14,22 +14,25 @@ import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import { render } from "react-dom";
 import ReactPhoneInput from "react-phone-input-2";
-
+import axios from 'axios'
 
 class SignUp extends Component {
     state={
         moreInfo:"",
         status: false,
-        phone: ""
+        phone: "",
+        api:"http://localhost:7000/api/newRuser"
     }
     showInfo(e){
         // e.preventDefault()
-        this.setState({moreInfo:<TourForm/>})
-    }
+        this.setState({api:"http://localhost:7000/api/newTuser",moreInfo:<TourForm/>})
+    //console.log(this.state.api)
+      }
     hideInfo(e){
         // e.preventDefault()
-        this.setState({moreInfo:''})
-    }
+        this.setState({api:"http://localhost:7000/api/newRuser",moreInfo:''})
+        
+      }
     handleChange(e) {
         this.setState({status: !this.state.status})
         if(!this.state.status){
@@ -40,29 +43,44 @@ class SignUp extends Component {
         
     //     this.setState({value: event.target.value })
     // }
+
     handleOnChange = value => {
         console.log(value);
         this.setState({ phone: value }, () => {
           console.log(this.state.phone);
         });}
+    //yasser type her
+      changeTheStateForform = (e)=>{
+        this.setState({
+          [e.target.name] : e.target.value
+        })
+      }
+
+      onsubmitTheStateToPosted = ()=>{
+
+        axios.post( this.state.api,this.state)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+      }
 
   render() {
+    console.log(this.state)
   return (
     <div >
       <br/><br/><br/><br/><br/>
       <h2 className="title">Sign Up</h2>
-     <Form className="SignUp"> 
+     <Form className="SignUp" onSubmit ={this.onsubmitTheStateToPosted}> 
     <Row>
       <Col>
         <FormGroup className="col-md-10">
             <Label for="First Name">First Name :</Label>
-            <Input type="text" name="First Name" id="First Name" placeholder="Enter your First Name" />
+            <Input type="text" name="firstName" id="First Name" placeholder="Enter your First Name"  onChange={this.changeTheStateForform}/>
         </FormGroup>
       </Col>
       <Col>
         <FormGroup className="col-md-10">
             <Label for="Last Name">Last Name :</Label>
-            <Input type="text" name="Last Name" id="Last Name" placeholder="Enter your Last Name" />
+            <Input type="text" name="lastName" id="Last Name" placeholder="Enter your Last Name" onChange={this.changeTheStateForform}/>
         </FormGroup>
       </Col>
       </Row>
@@ -80,7 +98,7 @@ class SignUp extends Component {
       <Col>
       <FormGroup className="col-md-10">
         <Label for="exampleEmail">Email :</Label>
-        <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+        <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder"  onChange={this.changeTheStateForform}/>
       </FormGroup>
       </Col>
       </Row>
@@ -88,20 +106,20 @@ class SignUp extends Component {
       <Col>
       <FormGroup className="col-md-10">
         <Label for="examplePassword">Password :</Label>
-        <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+        <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" onChange={this.changeTheStateForform} />
       </FormGroup>
       </Col>
       <Col>
       <FormGroup className="col-md-10">
         <Label for="examplePassword">Confirm Password :</Label>
-        <Input type="password" name="password_confirmation" id="password_confirmation" />
+        <Input type="password" name="password_confirmation" id="password_confirmation" onChange={this.changeTheStateForform}/>
       </FormGroup>
       </Col>
       </Row>
       <Col>
         <FormGroup tag="fieldset">
         <Label>User Type : </Label>
-          <CustomInput type="switch" id="exampleCustomSwitch2" name="customSwitch" label="Tour" onChange={(e)=>this.handleChange(e)} />
+          <CustomInput type="switch" id="exampleCustomSwitch2" name="tourType" label="Tour" onChange={(e)=>this.handleChange(e)} />
           {this.state.moreInfo}
         {/* <FormGroup check>
           <Label check>
@@ -119,7 +137,7 @@ class SignUp extends Component {
       </FormGroup>
       </Col>
       <Col>
-      <Button>Submit</Button>
+      <Button onClick ={this.onsubmitTheStateToPosted} > Submit</Button>
       <Link to="/Login"><Button className='log'>Sign In</Button></Link>
       </Col>
     </Form>
